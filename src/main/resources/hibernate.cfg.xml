@@ -16,6 +16,6 @@
         <!--update on startup-->
         <property name="hibernate.hbm2ddl.auto">update</property>
         <!--Entity Class-->
-        <mapping class="com.api.msapi.model.Users"/>
+        <mapping class="com.api.msapi.entity.Users"/>
     </session-factory>
 </hibernate-configuration>

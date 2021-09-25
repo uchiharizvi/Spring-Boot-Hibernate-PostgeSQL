@@ -1,7 +1,7 @@
 /*
 package com.api.msapi;
 
-import com.api.msapi.model.Users;
+import com.api.msapi.entity.Users;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;

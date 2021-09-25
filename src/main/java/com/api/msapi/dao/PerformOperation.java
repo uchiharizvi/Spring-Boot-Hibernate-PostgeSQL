@@ -1,6 +1,6 @@
 package com.api.msapi.dao;
 
-import com.api.msapi.model.Users;
+import com.api.msapi.entity.Users;
 import com.api.msapi.model.request.UserRequest;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

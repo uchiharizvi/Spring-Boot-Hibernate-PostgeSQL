@@ -1,4 +1,4 @@
-package com.api.msapi.model;
+package com.api.msapi.entity;
 
 import lombok.Data;
 
