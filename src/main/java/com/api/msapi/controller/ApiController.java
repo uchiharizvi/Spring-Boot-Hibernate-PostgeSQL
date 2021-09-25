@@ -1,12 +1,34 @@
 package com.api.msapi.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.api.msapi.dao.Operations;
+import com.api.msapi.model.Users;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class ApiController {
-    @GetMapping("/v1/getData")
-    public String getData() {
+    @Autowired
+    private Operations crudOperation;
+
+    @GetMapping("/v1/getusers")
+    public List<Users> getUsers() throws Exception {
+        return crudOperation.getUsers();
+    }
+
+    @GetMapping("/v1/user/{userId}")
+    public List<Users> getUserDetail(@PathVariable Integer userId) throws Exception {
+        return crudOperation.getUserDetail(userId);
+    }
+
+    @PostMapping("/v1/adduser")
+    public String addUser() {
+        return "Controller Created";
+    }
+
+    @PutMapping("/v1/user/{userId}")
+    public String updateUser() {
         return "Controller Created";
     }
 }
