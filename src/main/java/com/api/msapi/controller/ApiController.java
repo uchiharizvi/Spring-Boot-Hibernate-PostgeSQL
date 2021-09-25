@@ -2,6 +2,7 @@ package com.api.msapi.controller;
 
 import com.api.msapi.dao.Operations;
 import com.api.msapi.model.Users;
+import com.api.msapi.model.request.UserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,8 +24,8 @@ public class ApiController {
     }
 
     @PostMapping("/v1/adduser")
-    public String addUser() {
-        return "Controller Created";
+    public String addUser(@RequestBody UserRequest userDetail) throws Exception {
+        return crudOperation.addUser(userDetail);
     }
 
     @PutMapping("/v1/user/{userId}")
