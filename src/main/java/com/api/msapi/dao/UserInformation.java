@@ -1,0 +1,27 @@
+package com.api.msapi.dao;
+
+import lombok.Data;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Data
+/**This class will represent a row in the database table.
+ * The primary key is specified by the @Id annotation
+ * In this case, userId is the primary key and the table will have userId,LastName,FirstName,Address and
+ * City as columns.**/
+public class UserInformation implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "userid", updatable = false, nullable = false)
+    public Integer userId;
+
+    public String lastName;
+    public String firstName;
+    public String address;
+    public String city;
+
+}

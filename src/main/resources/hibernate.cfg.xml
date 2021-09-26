@@ -6,7 +6,7 @@
     <session-factory>
         <!--Connection Settings-->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/users</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Users</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">admin</property>
 
@@ -16,6 +16,6 @@
         <!--update on startup-->
         <property name="hibernate.hbm2ddl.auto">update</property>
         <!--Entity Class-->
-        <mapping class="com.api.msapi.entity.Users"/>
+        <mapping class="com.api.msapi.dao.UserInformation"/>
     </session-factory>
 </hibernate-configuration>
