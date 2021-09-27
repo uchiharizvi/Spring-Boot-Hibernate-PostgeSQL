@@ -51,7 +51,7 @@ public class PerformOperation implements Operations {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.save(userInformation);
-        session.getTransaction().commit();
+        session.getTransaction().commit();//use annotation instead
         session.close();
         return "User Added Successfully";
     }
