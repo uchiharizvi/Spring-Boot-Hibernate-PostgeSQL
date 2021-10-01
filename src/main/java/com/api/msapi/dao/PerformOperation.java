@@ -20,7 +20,6 @@ public class PerformOperation implements Operations {
         //HQL
         Query query = session.createQuery("from UserInformation ");
         List<UserInformation> usersList = query.list();
-        session.getTransaction().commit();
 
         sessionFactory.close();
         return usersList;
@@ -34,19 +33,12 @@ public class PerformOperation implements Operations {
         //HQL
         Query query = session.createQuery("from UserInformation where userId =" + userId);
         List<UserInformation> usersList = query.list();
-        session.getTransaction().commit();
         sessionFactory.close();
         return usersList;
     }
 
     @Override
-    public String addUser(UserRequest userDetail) throws Exception {
-        UserInformation userInformation = new UserInformation();
-        userInformation.setUserId(8);
-        userInformation.setLastName("X");
-        userInformation.setFirstName("Malcolm");
-        userInformation.setAddress("BEML");
-        userInformation.setCity("Benagaluru");
+    public String addUser(UserInformation userInformation) throws Exception {
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         Session session = sessionFactory.openSession();
         session.beginTransaction();

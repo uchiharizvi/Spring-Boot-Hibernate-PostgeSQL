@@ -24,8 +24,8 @@ public class ApiController {
     }
 
     @PostMapping("/v1/adduser")
-    public String addUser(@RequestBody UserRequest userDetail) throws Exception {
-        return crudOperation.addUser(userDetail);
+    public String addUser(@RequestBody UserInformation userInformation) throws Exception {
+        return crudOperation.addUser(userInformation);
     }
 
     @PutMapping("/v1/user/{userId}")

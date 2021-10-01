@@ -9,5 +9,5 @@ public interface Operations {
 
     List<UserInformation> getUserDetail(Integer userId) throws Exception;
 
-    String addUser(UserRequest userDetail) throws Exception;
+    String addUser(UserInformation userInformation) throws Exception;
 }
