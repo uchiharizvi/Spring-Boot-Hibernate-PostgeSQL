@@ -1,6 +1,6 @@
 package com.api.msapi.dao;
 
-import com.api.msapi.model.request.UserRequest;
+import com.api.msapi.entity.UserInformation;
 
 import java.util.List;
 

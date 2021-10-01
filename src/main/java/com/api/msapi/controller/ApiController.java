@@ -1,8 +1,7 @@
 package com.api.msapi.controller;
 
 import com.api.msapi.dao.Operations;
-import com.api.msapi.dao.UserInformation;
-import com.api.msapi.model.request.UserRequest;
+import com.api.msapi.entity.UserInformation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

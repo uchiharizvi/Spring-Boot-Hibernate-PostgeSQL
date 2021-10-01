@@ -1,7 +1,7 @@
 
 package com.api.msapi;
 
-import com.api.msapi.dao.UserInformation;
+import com.api.msapi.entity.UserInformation;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

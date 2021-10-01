@@ -1,4 +1,4 @@
-package com.api.msapi.dao;
+package com.api.msapi.entity;
 
 import lombok.Data;
 
